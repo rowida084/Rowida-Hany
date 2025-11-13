@@ -1,0 +1,32 @@
+#include <iostream>
+#include<algorithm>
+#include <cmath>
+#include<iomanip>
+using namespace std;
+
+int main() {
+	int t;
+	cin >> t;
+	int n, x, y;
+	
+	while (t--) {
+		cin >> n;
+		cin >> x;
+bool check = true;
+        n--;
+		while (n--) {
+			cin >> y;
+			if (abs(x-y) != 5 &&abs(x-y) != 7) {
+				check = false;
+	
+			}
+				x = y;
+		}
+		if (check) {
+			cout << "YES" << endl;
+		}
+		else {
+			cout << "NO" << endl;
+		}
+	}
+}
