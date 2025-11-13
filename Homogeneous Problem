@@ -1,0 +1,39 @@
+#include <iostream>
+#include<algorithm>
+#include<iomanip>
+using namespace std;
+void  sum(int a, int b,long long &sum,long long &evens,long long & odds) {
+	int start;
+	int end;
+	if (a < b) {
+		start = a;
+		end = b;
+	}
+	else {
+		start = b;
+		end = a;
+	}
+	
+	for (int i = start; i <= end; i++) {
+		sum += i;
+		if (i % 2 == 0) {
+			evens += i;
+		}
+		else {
+			odds += i;
+		}
+	}
+}
+
+
+
+int main() {
+	int a,  b;
+	cin >> a >> b;
+	long long sumAll = 0, evens = 0, odds = 0;
+	sum(a, b, sumAll, evens, odds);
+	cout << sumAll << endl;
+	cout << evens << endl;
+	cout << odds << endl;
+	return 0;
+}
